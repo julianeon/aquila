@@ -1,0 +1,129 @@
+Welcome to the Emacs shell
+
+~ $ ls -tr
+Videos  Music      Pipfile  perl5      go     Ruby  redia   Pictures  Other      JavaScript  Documents
+Public  Templates  too.txt  brave-bin  snapd  Coin  Python  libra     Downloads  Rust        Desktop
+~ $ cd JavaScript/
+~/JavaScript $ ls -tr
+cryptodash   basic_wallet  swatchblog    freelancer  hacker   model                  formspree  hakker
+hello-world  gspa          grayscale     agency      twitter  cleanage               Other      Glitch
+spar         erc           model-newage  hackblog    libra    bitcoin-price-index    hexo-dust  Hero
+espa         curr          screwage      hackage     libro    hexo-theme-alpha-dust  alpha      
+~/JavaScript $ cd Hero/
+~/JavaScript/Hero $ ls -tr
+tosh  hello-world  graphqler  graphql.js  graphserver  graphclient  uploader  updemo  aquila
+~/JavaScript/Hero $ cd aquila/
+~/JavaScript/Hero/aquila $ ls -tr
+package.json  yarn.lock  public  README.md  node_modules  src
+~/JavaScript/Hero/aquila $ cd src/
+~/JavaScript/Hero/aquila/src $ ls -tr
+serviceWorker.js  oapp.js  logo.svg  index.js  index.css  dex.js  App.test.js  App.css  App.js
+~/JavaScript/Hero/aquila/src $ cd App.j
+No such directory found via CDPATH environment variable
+~/JavaScript/Hero/aquila/src $ cat App.js 
+import { Query } from "react-apollo";
+import { gql } from "apollo-boost";
+import React from 'react';
+import { Route, NavLink, HashRouter as Router } from 'react-router-dom';
+
+const App = () => {
+  return (
+	  <div>
+	  <Router>
+	  <Layout>
+          <div className="content">
+          <Route exact path="/" component={Home}/>
+ 	  <Route path="/about" component={About} />
+          <Route path="/contact" component={Contact}/>
+	  <Route path="/post" component={Post}/>	  
+	  </div>
+	  </Layout>
+	  </Router>
+          </div>
+  );
+}
+
+
+const SayQL = () => (
+  <Query
+    query={gql`
+      {
+        books {
+          title
+          author
+        }
+      }
+    `}
+  >
+    {({ loading, error, data }) => {
+      if (loading) return <p>Loading...</p>;
+      if (error) return <p>Error damn </p>;
+
+      return data.books.map(({ title, author }) => (
+        <div key={title}>
+          <p>{title}: {author}</p>
+        </div>
+      ));
+    }}
+  </Query>
+);
+
+function App() {
+    return (
+        <SayQL />
+    );
+}
+
+export default App;
+
+
+~/JavaScript/Hero/aquila/src $ 
+~/JavaScript/Hero/aquila/src $ cd ../..
+~/JavaScript/Hero $ ls -tr
+tosh  hello-world  graphqler  graphql.js  graphserver  graphclient  uploader  updemo  aquila
+~/JavaScript/Hero $ cd uploader/
+~/JavaScript/Hero/uploader $ ls -tr
+LICENSE  app  server
+~/JavaScript/Hero/uploader $ cd app/
+~/JavaScript/Hero/uploader/app $ ls -tr
+README.md  public  yarn.lock  package.json  node_modules  src
+~/JavaScript/Hero/uploader/app $ cd src/
+~/JavaScript/Hero/uploader/app/src $ ls -tr
+progress  dropzone  index.js  banner.js  jumbo.js  App.js  index.css  App.css  upload
+~/JavaScript/Hero/uploader/app/src $ cat App.css 
+.App {
+  text-align: center;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+.Card {
+
+  padding: 32px;
+  width: 50%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11),
+    0 5px 15px 0 rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+}
+~/JavaScript/Hero/uploader/app/src $ cd ..
+~/JavaScript/Hero/uploader/app $ cd public/
+~/JavaScript/Hero/uploader/app/public $ ls -tr
+manifest.json  favicon.ico  baseline-cloud_upload-24px.svg  baseline-check_circle_outline-24px.svg  index.html
+~/JavaScript/Hero/uploader/app/public $ cp ~/Desktop/cetan.png .
+~/JavaScript/Hero/uploader/app/public $ filetype cetan.png 
+filetype: command not found
+~/JavaScript/Hero/uploader/app/public $ file cetan.png 
+cetan.png: PNG image data, 205 x 116, 8-bit/color RGB, non-interlaced
+~/JavaScript/Hero/uploader/app/public $ convert -resize 400x100! cetan.png cetano.png
+~/JavaScript/Hero/uploader/app/public $ convert -resize 200x200! cetan.png cetano.png
+~/JavaScript/Hero/uploader/app/public $ convert -resize 200x150! cetan.png cetano.png
+~/JavaScript/Hero/uploader/app/public $ convert -resize 200x112! cetan.png cetano.png
+~/JavaScript/Hero/uploader/app/public $ convert -resize 200x125! cetan.png cetano.png
+~/JavaScript/Hero/uploader/app/public $ 

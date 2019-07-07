@@ -122,7 +122,9 @@ class Upload extends Component {
   }
 
   render() {
-    return (
+      return (
+            <div className="App">
+              <div className="Card">
       <div className="Upload">
         <span className="Title">Upload Files</span>
         <div className="Content">
@@ -144,7 +146,9 @@ class Upload extends Component {
           </div>
         </div>
         <div className="Actions">{this.renderActions()}</div>
-      </div>
+          </div>
+          </div>
+        </div>
     );
   }
 }

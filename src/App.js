@@ -1,22 +1,23 @@
 import React from "react";
+import { Route, HashRouter as Router } from 'react-router-dom';
 import Upload from "./upload/Upload";
-import Banner from "./banner";
-import Jumbo from "./jumbo";
-import styled from 'styled-components';
+import Home from "./home";
+import Show from "./show";
+import Layout from "./layout";
 import "./App.css";
 
 const App = () => {
-      return (
-          <div>
-
-            <Banner/>
-          <Jumbo/>                        
-            <div className="App">
-              <div className="Card">
-                <Upload />
-              </div>
-            </div>
-          </div>
+    return (
+	  <div>
+	  <Router>
+	  <Layout>
+          <div className="content">
+          <Route exact path="/" component={Home}/>
+ 	  <Route path="/show" component={Show} />
+	  </div>
+	  </Layout>
+	  </Router>
+         </div>
     );
 }
 
