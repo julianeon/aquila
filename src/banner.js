@@ -12,15 +12,15 @@ text-align: center;
 
 `
 
-const Hi=styled.h1`
+const Hi=styled.h2`
 	color: #fff;
 	text-shadow: 0px -1px 4px white, 0px -2px 10px yellow, 0px -10px 20px #ff8000, 0px -18px 40px red;
 	font: 80px 'BlackJackRegular';
 `
 
 const Imgur = styled.img`
-border-radius:50%;
-padding: 25px;
+border-radius: 12%;
+padding: 15px;
 `
 
 const Ha=styled.h4`
@@ -28,10 +28,16 @@ color: #ffff4;
 margin-down: 10px;
 `
 
+const Dark=styled.div`
+background-color: red;
+text-align: center;
+padding: 20px;
+`
+
 export default function() {
-    return ( <Mark>
-            <Hi>AQUILA</Hi>
-            <Ha>See what's happening with your data.</Ha>
-          </Mark>
+    return ( <Dark>
+             <Imgur src="logo.png" alt="logo"/>
+            <Hi>See your data.</Hi>
+          </Dark>
     )
 }
