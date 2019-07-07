@@ -2,7 +2,7 @@ import React from 'react';
 import { Jumbotron, Button, Container } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import Example from './example';
+import Modal from './modal';
 
 const Padder=styled.div`
 padding-bottom:15px;
@@ -24,7 +24,7 @@ export default function() {
                     </Centerer>
             <Padder><Link to="/show"><Button size="sm" color="primary">See your data's structure</Button></Link></Padder>
             <Padder><Link to="/cards"><Button size="sm" color="info">See your data as cards</Button></Link></Padder>
-        <Example/>
+        <Modal/>
             </Container>
         </Jumbotron>
     )
