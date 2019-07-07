@@ -1,6 +1,7 @@
 import React from 'react';
 import { Jumbotron, Button, Container } from 'reactstrap';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const Mark=styled.div`
 background-color:red;
@@ -29,15 +30,15 @@ margin-down: 10px;
 `
 
 const Dark=styled.div`
-background-color: red;
+background: linear-gradient(red, pink);
 text-align: center;
 padding: 20px;
 `
 
 export default function() {
     return ( <Dark>
-             <Imgur src="logo.png" alt="logo"/>
-            <Hi>See your data.</Hi>
+             	  <Link to="/"><Imgur src="logo.png" alt="logo"/></Link>
+            <Hi>The data is yours now.</Hi>
           </Dark>
     )
 }
