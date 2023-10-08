@@ -4,7 +4,7 @@ This repo was created for a hackathon.
 
 It lets you upload data, then view it in card format.
 
-![view of the data](aquila_data.png)
+![view of the data](./public/aquila_data.png)
 
 It won't run with modern node versions because of the openssl issue but, if you want to run it, you can by entering this into your terminal:
 
