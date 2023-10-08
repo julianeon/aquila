@@ -15,7 +15,9 @@ Note: not a good security practice in general but this will let the app run if y
 
 Created with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Run The App
+
+First, run  `npm install`.
 
 In the project directory, you can run:
 
